@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Weather
+  public  class Weather
     {
         // member var.
         private Random rnd;
@@ -22,10 +22,9 @@ namespace LemonadeStand
 
 
 
-        public Weather()
+        public Weather(Random rnd)
         {
-
-
+            this.rnd = rnd;
 
 
         }
@@ -43,7 +42,7 @@ namespace LemonadeStand
         }
         public double GenerateTemperature()
         {
-            temperature = rnd.Next(55, 100);
+            temperature = rnd.Next(60, 120);
             return temperature;
 
         }
