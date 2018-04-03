@@ -8,16 +8,28 @@ namespace LemonadeStand
 {
     public class Day
     {
+
+        int amountOfCustomers;
         public Weather weather;
         public Random rnd;
+        public List<Customer> customer = new List<Customer>();
 
-        public Day()
+        public Day(Random rnd)
         {
-            rnd = new Random();
-
-            Weather weather = new Weather(rnd);
+    
+            this.rnd = rnd;
+            amountOfCustomers = rnd.Next(40, 90);
+            for (int i = 1; i <= amountOfCustomers; i++)
+            {
+                customer.Add(new Customer());
+            }
+            weather = new Weather(rnd);
         }
 
+        
     }
-
 }
+
+     
+
+            

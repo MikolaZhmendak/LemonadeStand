@@ -9,41 +9,39 @@ namespace LemonadeStand
     public class Player
     {
         //member var.
-        public string PlayerName;
-        private float StartingCash;
+        public string playerName;
+        public double cash;
+        public Inventory inventory;
+        public Recipe recipe;
 
         //Constructor
 
         public Player()
         {
-            StartingCash = 100.00f;
+            cash = 100.00f;
             GetPlayerName();
+            recipe = new Recipe();
+            inventory = new Inventory();
         }
 
         public string GetPlayerName()
         {
-           Console.WriteLine("Please enter player's name");
-            PlayerName = Console.ReadLine();
-            return PlayerName;
-      }
-        //public string PlayerName
-        //{
-        //    get
-        //    {
-        //        return PlayerName;
-        //    }
-        //    set
-        //    {
-        //        return PlayerName;
-        //    }
-        //}
+            Console.WriteLine("Please enter player's name");
+            playerName = Console.ReadLine();
+            return playerName;
+        }
+        public string PlayerName
+        {
+            get { return playerName; }
+            set { playerName = value; }
+        }
 
 
 
 
         public void CheckYouWalet()
         {
-            if (StartingCash <= 0)
+            if (cash <= 0)
             {
                 Environment.Exit(0);
             }
@@ -52,11 +50,15 @@ namespace LemonadeStand
                 return;
             }
         }
+        //public bool CheckLevelOfIngredients()
+        //{
+        //    if (inventory.Ice >= recipe.iceCubesUsed && inventory.Sugar >= recipe.sugarsUsed && inventory.Lemons >= recipe.lemonsUsed && inventory.Cups >= 0)
+        //        return true;
+        //}
+        //return false;
        
-
-        }
     }
-
+}
 
 
 

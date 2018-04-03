@@ -6,24 +6,37 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Game
+   public class Game
     {
-        Random random = new Random();
+        Random rnd = new Random();
         private Player player;
         private Weather weather;
         private Store store;
-        private Day day;
+        public Day day;
         private List<Day> totalDaysPlayed;
-    //    private List<string> WeatherConditions = new List<string>();
-    //    private string weatherCondition;
+        private Recipe recipe;
+
+
 
         public Game()
         {
             player = new Player();
             totalDaysPlayed = new List<Day>();
-            totalDaysPlayed.Add(new Day());
+            totalDaysPlayed.Add(new Day(rnd));
+            //{
+            //    new Day(rnd) { Name = "Moday", weather = new Weather(rnd) };
+            //    new Day(rnd) { Name = "Thusday", weather = new Weather(rnd) };
+            //    new Day(rnd) { Name = "Wednesday", weather = new Weather(rnd) };
+            //    new Day(rnd) { Name = "Thursday", weather = new Weather(rnd) };
+            //    new Day(rnd) { Name = "Friday", weather = new Weather(rnd) };
+            //    new Day(rnd) { Name = "Saturday", weather = new Weather(rnd) };
+            //    new Day(rnd) { Name = "Sunday", weather = new Weather(rnd) };
+            //}
             store = new Store();
-            day = new Day();
+            day = new Day(rnd);
+            recipe = new Recipe();
+      
+      
         }
 
 
@@ -32,11 +45,32 @@ namespace LemonadeStand
       public void StartGame()
         {
             UI.DisplayPlayerInstructions(player);
-            UI.DiplayWeatherConditions(day);
-            UI.DisplayChicesToBuy(store);           }
-     
+           // for (int i = 1; i < 8; i++)
+           // {
+                UI.DiplayWeatherConditions(day, weather);
+                UI.DisplayChicesToBuy(store, player);
+                UI.DiplayUserIngredients(store, player);
+                UI.AskForPlayerRecipe(recipe);
+
+            }
+
+
+           
+           
         }
-    }
+
+
+}
 
 
 
+
+//{
+//    new Day(rnd) { Name = "Moday", weather = new Weather(rnd) };
+//    new Day(rnd) { Name = "Thusday", weather = new Weather(rnd) };
+//    new Day(rnd) { Name = "Wednesday", weather = new Weather(rnd) };
+//    new Day(rnd) { Name = "Thursday", weather = new Weather(rnd) };
+//    new Day(rnd) { Name = "Friday", weather = new Weather(rnd) };
+//    new Day(rnd) { Name = "Saturday", weather = new Weather(rnd) };
+//    new Day(rnd) { Name = "Sunday", weather = new Weather(rnd) };
+// }

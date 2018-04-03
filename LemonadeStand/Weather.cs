@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-  public  class Weather
+    public class Weather
     {
         // member var.
         private Random rnd;
         private double temperature;
-        private double demandBasedOnWeather;
+
         private List<string> WeatherConditions = new List<string>();
         private string weatherCondition;
-        private double DemandLevel;
-        protected double SunnyDemandFactor = 1.5;
-        protected double WindyDemandFactor = 1.2;
-        protected double CloudyDemandFactor = 0.8;
-        protected double RainyDemandFactor = 0.6;
+
+
 
 
 
@@ -32,39 +29,20 @@ namespace LemonadeStand
         public string ObtainWeatherConditions()
         {
             int result;
-            WeatherConditions.Add("Sunny");
+            WeatherConditions.Add(" Clear and Sunny");
             WeatherConditions.Add("Rainy");
             WeatherConditions.Add("Windy");
             WeatherConditions.Add("Cloudy");
-            result = rnd.Next(1, WeatherConditions.Count);
+            result = rnd.Next(0, WeatherConditions.Count - 1);
             weatherCondition = WeatherConditions[result];
-            return weatherCondition;
+            return weatherCondition.ToString();
         }
         public double GenerateTemperature()
         {
-            temperature = rnd.Next(60, 120);
+            temperature = rnd.Next(50, 90);
             return temperature;
 
         }
-        public void GenerateDemand()
-        {
-            if (weatherCondition == "Sunny")
-            {
-                demandBasedOnWeather = temperature * SunnyDemandFactor;
-            }
-            else if (weatherCondition == "Windy")
-            {
-                demandBasedOnWeather = temperature * WindyDemandFactor;
-            }
-            else if (weatherCondition == "Cloudy")
-            {
-                demandBasedOnWeather = temperature * CloudyDemandFactor;
-            }
-            else if (weatherCondition == "Rainy")
-            {
-                demandBasedOnWeather = temperature * RainyDemandFactor;
-            }
-        }
     }
 }
-
+        
