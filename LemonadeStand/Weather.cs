@@ -13,7 +13,7 @@ namespace LemonadeStand
         private double temperature;
 
         private List<string> WeatherConditions = new List<string>();
-        private string weatherCondition;
+        public string weatherCondition;
 
 
 
@@ -22,17 +22,16 @@ namespace LemonadeStand
         public Weather(Random rnd)
         {
             this.rnd = rnd;
-
+            WeatherConditions.Add("Sunny");
+            WeatherConditions.Add("Rainy");
+            WeatherConditions.Add("Windy");
+            WeatherConditions.Add("Cloudy");
 
         }
 
         public string ObtainWeatherConditions()
         {
             int result;
-            WeatherConditions.Add(" Clear and Sunny");
-            WeatherConditions.Add("Rainy");
-            WeatherConditions.Add("Windy");
-            WeatherConditions.Add("Cloudy");
             result = rnd.Next(0, WeatherConditions.Count - 1);
             weatherCondition = WeatherConditions[result];
             return weatherCondition.ToString();

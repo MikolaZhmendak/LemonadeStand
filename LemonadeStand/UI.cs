@@ -57,7 +57,7 @@ namespace LemonadeStand
         }
 
 
-        public static void DiplayWeatherConditions(Day day, Weather weather)
+        public static void DiplayWeatherConditions(Day day)
         {
             Console.WriteLine(" The weather conditions for today are: ");
             Console.WriteLine(" Weather forcast " + day.weather.ObtainWeatherConditions());

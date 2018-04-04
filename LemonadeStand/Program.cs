@@ -13,8 +13,11 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.StartGame();
+            Random rnd = new Random();
+            Day day = new Day(rnd);
+            day.GeneratingCustomersBasedOnWeather(rnd);
+            Console.ReadLine();
+        //    game.StartGame();
             Console.ReadLine();
         }
     }
