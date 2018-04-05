@@ -64,7 +64,7 @@ namespace LemonadeStand
         }
         public void SettingPrice(Recipe recipe)
         {
-            Console.WriteLine(" Enter the price per one cup of lemonade: ");
+            Console.WriteLine(" Enter the price per one cup of lemonade (between $0.5 and $4.5)");
             setPricePerCup = Double.Parse(Console.ReadLine());
             UI.AskForPlayerRecipe(recipe);
         }

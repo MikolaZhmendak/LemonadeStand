@@ -1,0 +1,9 @@
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\obj\Debug\LemonadeStandText.csprojResolveAssemblyReference.cache
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\bin\Debug\LemonadeStand.exe
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\bin\Debug\LemonadeStand.pdb
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Mikola\Desktop\MyC# porjects\LemonadeStand\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

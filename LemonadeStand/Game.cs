@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-   public class Game
+    public class Game
     {
         Random rnd = new Random();
         private Player player;
-      //  private Weather weather;
+        //  private Weather weather;
         private Store store;
         public Day day;
         private List<Day> totalDaysPlayed;
@@ -35,18 +35,18 @@ namespace LemonadeStand
             store = new Store();
             day = new Day(rnd);
             recipe = new Recipe();
-      
-      
+
+
         }
 
 
 
 
-      public void StartGame()
+        public void StartGame()
         {
             UI.DisplayPlayerInstructions(player);
-           // for (int i = 1; i < 8; i++)
-           // {
+            for (int i = 1; i < 8; i++)
+            {
                 UI.DiplayWeatherConditions(day);
                 day.GeneratingCustomersBasedOnWeather(rnd);
                 UI.DisplayChicesToBuy(store, player);
@@ -56,22 +56,13 @@ namespace LemonadeStand
             }
 
 
-           
-           
-        }
 
+
+        }
+    }
 
 }
 
 
 
 
-//{
-//    new Day(rnd) { Name = "Moday", weather = new Weather(rnd) };
-//    new Day(rnd) { Name = "Thusday", weather = new Weather(rnd) };
-//    new Day(rnd) { Name = "Wednesday", weather = new Weather(rnd) };
-//    new Day(rnd) { Name = "Thursday", weather = new Weather(rnd) };
-//    new Day(rnd) { Name = "Friday", weather = new Weather(rnd) };
-//    new Day(rnd) { Name = "Saturday", weather = new Weather(rnd) };
-//    new Day(rnd) { Name = "Sunday", weather = new Weather(rnd) };
-// }

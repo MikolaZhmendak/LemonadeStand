@@ -38,7 +38,7 @@ namespace LemonadeStand
         }
         public double GenerateTemperature()
         {
-            temperature = rnd.Next(50, 90);
+            temperature = rnd.Next(40, 100);
             return temperature;
 
         }

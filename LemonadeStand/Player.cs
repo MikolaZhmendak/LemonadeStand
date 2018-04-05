@@ -18,7 +18,7 @@ namespace LemonadeStand
 
         public Player()
         {
-            cash = 100.00f;
+            cash = 50.00f;
             GetPlayerName();
             recipe = new Recipe();
             inventory = new Inventory();
@@ -52,7 +52,7 @@ namespace LemonadeStand
         }
         //public bool CheckLevelOfIngredients()
         //{
-        //    if (inventory.Ice >= recipe.iceCubesUsed && inventory.Sugar >= recipe.sugarsUsed && inventory.Lemons >= recipe.lemonsUsed && inventory.Cups >= 0)
+        // if (inventory.Ice >= recipe.iceCubesUsed && inventory.Sugar >= recipe.sugarsUsed && inventory.Lemons >= recipe.lemonsUsed && inventory.Cups >= 0)
         //        return true;
         //}
         //return false;
