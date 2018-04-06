@@ -5,7 +5,7 @@ using LemonadeStand;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class LemonadeStandText
+    public class LemonadeStandTest1
     {
         [TestMethod]
         public void Text_RangeOfMyTemperatureFunction()
@@ -24,7 +24,7 @@ namespace UnitTestProject1
 
 
     [TestClass]
-    public class LemonadeStandText1
+    public class LemonadeStandTest2
     {
         [TestMethod]
         public void Text_IsMyTemperatureFunctionIsNotNull()
@@ -38,6 +38,22 @@ namespace UnitTestProject1
             Assert.IsNotNull(actualTemperature);
 
         }
+
+        [TestClass]
+        public class LemonadeStandTest3
+        {
+            [TestMethod]
+            public void SetWeather_Index0_Rainy()
+            {
+                string excetedValue = "Sunny";
+                Random rnd = new Random();
+                Weather w = new Weather(rnd);
+                w.ObtainWeatherConditions(0);
+                string actualValue = w.weatherCondition;                
+                Assert.AreEqual(excetedValue, actualValue);
+            }
+        }
     }
 }
 
+    

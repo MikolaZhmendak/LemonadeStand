@@ -57,10 +57,11 @@ namespace LemonadeStand
         }
 
 
-        public static void DiplayWeatherConditions(Day day)
+        public static void DiplayWeatherConditions(Day day, Random rnd)
         {
+            int random = rnd.Next(0, 4);
             Console.WriteLine(" The weather conditions for today are: ");
-            Console.WriteLine(" Weather forcast " + day.weather.ObtainWeatherConditions());
+            Console.WriteLine(" Weather forcast " + day.weather.ObtainWeatherConditions(random));
             Console.WriteLine(" The temperature is " + day.weather.GenerateTemperature());
 
 

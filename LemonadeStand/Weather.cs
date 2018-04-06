@@ -29,11 +29,11 @@ namespace LemonadeStand
 
         }
 
-        public string ObtainWeatherConditions()
+        public string ObtainWeatherConditions( int rnumber)
         {
-            int result;
-            result = rnd.Next(0, WeatherConditions.Count - 1);
-            weatherCondition = WeatherConditions[result];
+           
+          //  result = rnd.Next(0, WeatherConditions.Count - 1);
+            weatherCondition = WeatherConditions[rnumber];
             return weatherCondition.ToString();
         }
         public double GenerateTemperature()

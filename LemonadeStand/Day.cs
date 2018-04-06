@@ -28,34 +28,33 @@ namespace LemonadeStand
             {
                 customer.Add(new Customer());
             }
-        //    weather = new Weather(rnd);
+       
         }
         public int GeneratingCustomersBasedOnWeather(Random rnd)
         {
-            //    day = new Day(rnd);
-            //  day.weather.ObtainWeatherConditions();
-            string checkWeatherResult = weather.ObtainWeatherConditions();
+            int rnumber = rnd.Next(0, 4);
+            string checkWeatherResult = weather.ObtainWeatherConditions(rnumber);
             if (checkWeatherResult == "Sunny")
             {
                 amountOfCustomers = rnd.Next(50, 80);
-                //  customer.Add(new Customer());
+               
             }
             else if (checkWeatherResult == "Rainy")
             {
                 amountOfCustomers = rnd.Next(20, 30);
-                //  customer.Add(new Customer());
+                
             }
             else if (checkWeatherResult == "Windy")
             {
                 amountOfCustomers = rnd.Next(30, 50);
-                // customer.Add(new Customer());
+               
             }
 
             else if (checkWeatherResult == "Cloudy")
             {
 
                 amountOfCustomers = rnd.Next(40, 60);
-                //  customer.Add(new Customer());
+               
             }
             return amountOfCustomers;
         }

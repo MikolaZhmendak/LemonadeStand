@@ -47,7 +47,7 @@ namespace LemonadeStand
             UI.DisplayPlayerInstructions(player);
             for (int i = 1; i < 8; i++)
             {
-                UI.DiplayWeatherConditions(day);
+                UI.DiplayWeatherConditions(day,rnd);
                 day.GeneratingCustomersBasedOnWeather(rnd);
                 UI.DisplayChicesToBuy(store, player);
                 UI.DiplayUserIngredients(store, player);
